@@ -49,3 +49,32 @@
 
 </body>
 </html>
+<!-- 
+ 
+	 $(function() {
+		$("#title li:first").addClass("new");
+		$(".tab-list2 li:first").addClass("on");
+		
+		$(".tab-list2 li:first").addClass("on");
+		$("#tab-cont div:first").show().siblings().hide();//第一个大div
+		$(".inContent:first").show().siblings().hide();//第一个内容
+		
+		
+		$("#title li").click(function() {//最外层标签
+			
+			//$(".tab-info li:first").addClass('on').siblings().removeClass("on");//默认第一个小table显示
+			$('.user-main .tab-list2 li').siblings().removeClass("on")
+			$('.tab-list2').each(function(){$(this).find('li:first').addClass("on")})
+			$('.user-main .tab-list2 li:first').addClass("on").siblings().removeClass("on");
+			$(this).addClass("new").siblings().removeClass("new");
+			$(".tab-info").hide().eq($("#title li").index(this)).show();//大box
+			$(".tab-info .inContent:first-child").show().siblings().hide();//点击标题 第一个展示剩下隐藏
+		});
+		$(".tab-info li").click(function() {
+			$(this).addClass('on').siblings().removeClass("on");
+			$(".inContent").hide().eq($(".tab-info li").index(this)).show();
+		});
+	});  
+ 
+ 
+ -->
